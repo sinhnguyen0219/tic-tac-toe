@@ -16,13 +16,11 @@ public class TicTacToeKeywords {
 		t.Mark(row, col);
 	}
 	
-	
 	public String getMark(int row, int col) {
 		return t.GetMark(row,col);
 
 	}
-		
-    
+		 
 	public String getWinner() {
 		t.GetWinner();
 		return t.Winner();

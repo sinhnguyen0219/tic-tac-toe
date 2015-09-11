@@ -13,17 +13,10 @@ public class TicTacToe {
 	public static int turns = 0;
 	public static String wonHow = "  ";
 	
-
-
 	public static void main(String[] args) {
-	NewGame();
-
-		
+	NewGame();	
 	}
-	
-	
-
-	
+		
 	public static void NewGame(){
 		ClearBoard();
 		PrintBoard();
@@ -39,8 +32,6 @@ public class TicTacToe {
 		GetWinner();
 		Winner();
 		}
-
-
 	}
 	
 	public static void ClearBoard(){
@@ -98,7 +89,6 @@ public class TicTacToe {
 			UnableToMark();
 			out.println("\n\n" + UnableToMark());
 		}
-
 	}
 
 	public static String GetMark(int rMove, int cMove){
@@ -106,7 +96,8 @@ public class TicTacToe {
 		String location = character;
 		return location;
 	}
-	public static String CheckLocation(int rMove, int cMove){
+	
+public static String CheckLocation(int rMove, int cMove){
 		String character = Character.toString(board[rMove][cMove]);
 		String location =  character;
 		return location;

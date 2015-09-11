@@ -5,12 +5,10 @@ import static org.junit.Assert.*;
 
 public class TicTacToeTest {
    
-
 	@Test
 	public void testInitialBoardIsEmpty() {
 		TicTacToe.ClearBoard();
 		assertTrue(TicTacToe.IsBoardEmpty());
-
 	}
 	
 	@Test
