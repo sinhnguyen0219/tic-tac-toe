@@ -1,23 +1,26 @@
 package edu.jsu.mcis;
 
+
+
+
 import static java.lang.System.out;
 
 import java.util.Scanner;
 
 
-public class TicTacToe {
-	public static Scanner scan = new Scanner(System.in);
+	public class TicTacToe {
+	private static Scanner scan = new Scanner(System.in);
 	public static int row, col;
 	public static char[][] board = new char[3][3];
 	public static char who = 'X';
 	public static int turns = 0;
-	public static String wonHow = "  ";
+	private static String wonHow = "  ";
 	
 	public static void main(String[] args) {
 	NewGame();	
 	}
 		
-	public static void NewGame(){
+	private static void NewGame(){
 		ClearBoard();
 		PrintBoard();
 		while (StillRunning()){
@@ -43,7 +46,7 @@ public class TicTacToe {
 		}
 	}
 	
-	public static void PrintBoard(){
+	private static void PrintBoard(){
 		for (int i = 0; i < 3; i++){
 			out.println();
 			for (int j = 0; j < 3; j++){
@@ -114,7 +117,7 @@ public static String CheckLocation(int rMove, int cMove){
 			 return true;
 		}
 	
-	public static boolean HorizontalWin(){
+	private static boolean HorizontalWin(){
 		if (board[0][0] == board[0][1] && 
 				board[0][0] == board[0][2] &&
 				board[0][0] != '_')
@@ -132,7 +135,7 @@ public static String CheckLocation(int rMove, int cMove){
 			return false;
 	}
 	
-	public static boolean VerticalWin(){
+	private static boolean VerticalWin(){
 		if (board[0][0] == board[1][0] && 
 				board[0][0] == board[2][0] &&
 				board[0][0] != '_' )
@@ -149,7 +152,7 @@ public static String CheckLocation(int rMove, int cMove){
 			return false;
 	}
 	
-	public static boolean DiagonalWin(){
+	private static boolean DiagonalWin(){
 		if (board[0][0] == board[1][1] && 
 				board[0][0] == board[2][2] &&
 				board[0][0] != '_')
@@ -229,6 +232,8 @@ public static String CheckLocation(int rMove, int cMove){
 						who = 'O';
 				 }
 				 else {
+					 who = 'O';
+				 }
 				out.println();
 				out.println("It is a Tie.");
 				winner = "TIE";
@@ -236,9 +241,9 @@ public static String CheckLocation(int rMove, int cMove){
 		
 
 		
-	
-	}
 		return winner;
+	}
+
 }
-}
+
 

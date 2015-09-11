@@ -1,5 +1,7 @@
 package edu.jsu.mcis;
 
+
+
 import org.junit.*;
 import static org.junit.Assert.*;
 
@@ -60,7 +62,6 @@ public class TicTacToeTest {
 	@Test
 	public void testGameIsOverByTieIfAllLocationsAreFilled() {
 		TicTacToe.ClearBoard();
-
 		TicTacToe.Mark(1,1);
 		TicTacToe.Mark(0, 0);
 		TicTacToe.Mark(2, 0);
